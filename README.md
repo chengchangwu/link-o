@@ -6,7 +6,7 @@ I need to link foo.o before libbar.so in Rust,
 
 I tried rust-link-lib=foo. It only works for libraries that begin with lib and end with .so or .a.
 
-I tried rust-link-arg=foo.o and rust-link-lib=bar. It puts foo.o after -lbar, which results in an undefined symbol error.
+I tried rust-link-arg=foo.o and rust-link-lib=bar. It puts foo.o after -lbar, which results in an undefined reference error.
 
 Compile the C .o and .so files,
 
@@ -26,7 +26,7 @@ Linking in rust,
 
 ```
 cargo run
-...
+```
 
 Failed with message,
 
